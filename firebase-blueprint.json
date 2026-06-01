@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "TelemetryResult": {
+      "title": "Telemetry Result",
+      "description": "An anonymous record of a user's quiz result",
+      "type": "object",
+      "properties": {
+        "browserId": { "type": "string" },
+        "brainType": { "type": "string" },
+        "scores": {
+          "type": "object",
+          "properties": {
+            "T": { "type": "number" },
+            "F": { "type": "number" },
+            "C": { "type": "number" },
+            "D": { "type": "number" }
+          }
+        },
+        "createdAt": { "type": "timestamp" }
+      },
+      "required": ["browserId", "brainType", "scores", "createdAt"]
+    }
+  },
+  "firestore": {
+    "results/{resultId}": {
+      "schema": { "$ref": "#/entities/TelemetryResult" },
+      "description": "Telemetry collection for storing quiz results"
+    }
+  }
+}

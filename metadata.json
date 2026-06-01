@@ -1,0 +1,8 @@
+{
+  "name": "ジム・クイック C.O.D.E 脳タイプ診断 (Jim Kwik Brain Test)",
+  "description": "ユーザーの脳タイプ（チーター、フクロウ、イルカ、ゾウ）を診断し、最適な学習法とデイリーアクションプランを提案するMVP",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
