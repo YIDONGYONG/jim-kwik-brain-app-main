@@ -6,8 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    // Relative base path to avoid any subpath issues on GitHub Pages
-    base: './',
+    // Reverting to the absolute repository base path for GitHub Pages
+    base: '/jim-kwik-brain-app-main/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || ''),
@@ -24,6 +24,7 @@ export default defineConfig(({mode}) => {
     build: {
       outDir: 'dist',
       emptyOutDir: true,
+      sourcemap: true // Enable sourcemaps to help debugging in production
     }
   };
 });
