@@ -103,8 +103,8 @@ export default function App() {
         </div>
       </header>
 
-      <main className="w-full max-w-3xl mx-auto flex-1 flex flex-col items-center justify-center p-4 pt-10 pb-6">
-        <div className="w-full flex-1 flex flex-col items-center justify-center">
+      <main className="w-full max-w-3xl mx-auto flex-1 flex flex-col items-center justify-center p-4">
+        <div className="w-full flex-1 flex flex-col items-center justify-center py-12">
           <AnimatePresence mode="wait">
             {step === 'welcome' && (
               <motion.div
@@ -157,19 +157,21 @@ export default function App() {
           </AnimatePresence>
         </div>
 
-        {step !== 'result' && (
-          <div className="mt-4 w-full text-center">
-            <AdBanner />
-          </div>
-        )}
+        <div className="w-full mt-auto">
+          {step !== 'result' && (
+            <div className="mb-8 w-full text-center">
+              <AdBanner />
+            </div>
+          )}
 
-        <footer className="w-full mt-8 pt-6 border-t border-gray-100 text-center text-xs text-gray-400 leading-relaxed">
-          <p>© 2026 君の脳は All Rights Reserved.</p>
-          <p className="mt-2">
-            ※このアプリは、挫折寸前の脳と大量のカフェインで駆動しています。<br />
-            エラー画面に負けず、今夜もデバッグを続けるすべての受講生に、無限のコンパイル成功を！
-          </p>
-        </footer>
+          <footer className="w-full pb-8 pt-6 border-t border-gray-100 text-center text-xs text-gray-400 leading-relaxed">
+            <p>© 2026 君の脳は All Rights Reserved.</p>
+            <p className="mt-2">
+              ※このアプリは、挫折寸前の脳と大量のカフェインで駆動しています。<br />
+              エラー画面に負けず、今夜もデバッグを続けるすべての受講生に、無限のコンパイル成功を！
+            </p>
+          </footer>
+        </div>
       </main>
     </div>
   );
